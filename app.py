@@ -3,6 +3,7 @@ from tkinter import PhotoImage
 from ds1l import ds1lista
 from ds3l import ds3lista
 from ds2l import ds2lista
+from bb import bblista
 import random
 from PIL import Image, ImageTk
 import os
@@ -28,6 +29,8 @@ def SwitchGames(ds, bronie):
         filtered_lista = ds2lista.copy()
     elif ds == "Dark Souls 3":
         filtered_lista = ds3lista.copy()
+    elif ds == "Bloodborne":
+        filtered_lista = bblista.copy()
 
     if frame is not None:
         frame.destroy()
@@ -346,6 +349,49 @@ class ds3BronieFrame(tk.Frame):
         tk.Checkbutton(self, text="Whip", variable=var24, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=11, column=1, sticky="w")
 
 
+class bbBronieFrame(tk.Frame):
+    def __init__(self, container, lista):
+        super().__init__(container,
+    bg="#252526",
+    bd=2,
+    relief=tk.RIDGE)
+
+        titleLabel.config(text="Bloodborne", bg= "#0f0f0f", fg="white")
+        folder = resource_path('weapons_pngs/bbWeapons')
+
+        bronie = []
+        for images in os.listdir(folder):
+            bronie.append(images)
+
+        var1 = tk.BooleanVar()
+        var2 = tk.BooleanVar()
+        var3 = tk.BooleanVar()
+
+
+        def ChooseWeapon():
+            global filtered_lista
+
+            filtered_lista = []
+
+            for item in lista:
+                key = list(item.keys())[0]
+
+                if key == bronie[0] and var1.get(): continue
+                if key == bronie[1] and var2.get(): continue
+                if key == bronie[2] and var3.get(): continue
+
+
+                filtered_lista.append(item)
+
+            print("Aktualna pula:", len(filtered_lista))
+
+        tk.Label(self, text="Wyjmij rodzaj broni z puli losowań", bg="#252526", fg="white").grid(row=0, column=0, columnspan=2)
+        tk.Checkbutton(self, text="Firearms", variable=var1, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=1, column=0, sticky="w")
+        tk.Checkbutton(self, text="Hunter Tools", variable=var2, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=2, column=0, sticky="w")
+        tk.Checkbutton(self, text="Trick Weapons", variable=var3, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=3, column=0, sticky="w")
+
+
+
 def RandomWeap():
     source = filtered_lista 
 
@@ -395,7 +441,7 @@ titleLabel.config(font=("Arial", 25))
 
 darkSoulFrame = tk.Frame(root, bg="#0f0f0f", height=70)
 darkSoulFrame.grid(row=1, column=0, sticky="ew")
-darkSoulFrame.grid_columnconfigure((0,1,2), weight=1)
+darkSoulFrame.grid_columnconfigure((0,1,2,3), weight=1)
 
 mainFrame = tk.Frame(root, bg="#1e1e1e")
 mainFrame.grid(row=2, column=0, sticky="nsew", padx=15, pady=15)
@@ -414,14 +460,18 @@ showFrame.grid(row=0, column=1, sticky="nsew")
 showFrame.grid_rowconfigure(0, weight=1)
 showFrame.grid_columnconfigure(0, weight=1)
 
-darkSoulButton = tk.Button(darkSoulFrame, text="Dark Souls 1", width=17, command=lambda: SwitchGames("Dark Souls 1", ds1BronieFrame))
-darkSoulButton.grid(row=0, column= 0, padx = 5, pady = 5)
+darkSoulButton = tk.Button(darkSoulFrame, text="Dark Souls 1", width=12, command=lambda: SwitchGames("Dark Souls 1", ds1BronieFrame))
+darkSoulButton.grid(row=0, column= 0, padx = 2, pady = 1)
 
-darkSoulButton2 = tk.Button(darkSoulFrame, text="Dark Souls 2", width=17, command=lambda: SwitchGames("Dark Souls 2", ds2BronieFrame))
-darkSoulButton2.grid(row=0, column= 1, padx = 5, pady = 5)
+darkSoulButton2 = tk.Button(darkSoulFrame, text="Dark Souls 2", width=12, command=lambda: SwitchGames("Dark Souls 2", ds2BronieFrame))
+darkSoulButton2.grid(row=0, column= 1, padx = 2, pady = 1)
 
-darkSoulButton3 = tk.Button(darkSoulFrame, text="Dark Souls 3", width=17, command=lambda: SwitchGames("Dark Souls 3", ds3BronieFrame))
-darkSoulButton3.grid(row=0, column= 2, padx = 5, pady = 5)
+darkSoulButton3 = tk.Button(darkSoulFrame, text="Dark Souls 3", width=12, command=lambda: SwitchGames("Dark Souls 3", ds3BronieFrame))
+darkSoulButton3.grid(row=0, column= 2, padx = 2, pady = 1)
+
+bloodborneButton = tk.Button(darkSoulFrame, text="Bloodborne", width=12, command=lambda: SwitchGames("Bloodborne", bbBronieFrame))
+bloodborneButton.grid(row=0, column= 3, padx = 2, pady = 1)
+
 
 newList = []
 nazwa = ""
