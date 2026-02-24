@@ -269,11 +269,46 @@ fist = [
     "Manikin Claws"
 ]
 
+chimes = [
+  "Caithas Chime",
+  "Clerics Sacred Chime",
+  "Crystal Chime",
+  "Priests Chime",
+  "Sacred Chime Of Filianore",
+  "Saint-Tree Bellvine",
+  "Yorshkas Chime"
+]
 
-alltab = [axes, bows, crossbows, curved_greatswords, curved_swords,
-        daggers, fist, greatbows, greatswords, greataxes, great_hammers, halberds,
+staves = [
+  "Archdeacon Great Staff",
+  "Court Sorcerers Staff",
+  "Heretics Staff",
+  "Izalith Staff",
+  "Man-grubs Staff",
+  "Medicants Staff",
+  "Murky Longstaff",
+  "Preacher's Right Arm",
+  "Sages Crystal Staff",
+  "Sorcerers Staff",
+  "Storytellers Staff",
+  "Witchtree Branch"
+]
+
+talismans = [
+  "Canvas Talisman",
+  "Saints Talisman",
+  "Sunless Talisman",
+  "Sunlight Talisman",
+  "Talisman",
+  "White Hair Talisman"
+]
+
+flames = ["Demon's Scar", "Pyromancer's Parting Flame", "Pyromancy Flame"]
+
+alltab = [axes, bows, chimes, crossbows, curved_greatswords, curved_swords,
+        daggers, fist, flames, greatbows, greatswords, greataxes, great_hammers, halberds,
         hammers, katanas, piercingSword, reaper, straight_swords,
-        spears, ultra_greatswords, whips]
+        spears, staves, talismans, ultra_greatswords, whips]
 
 
 
@@ -284,6 +319,10 @@ count = 0
 cr = 0
 
 bronie = []
+
+p = f"{folder2}/talisman"
+for y in os.listdir(p):
+    print(f"{y}")
 
 for images in os.listdir(folder2):
     cr = 0
@@ -307,4 +346,3 @@ pt = f'weapons_pngs/ds2Weapons'
 
 for x in bronie:
     print(f"X: {x}")
-

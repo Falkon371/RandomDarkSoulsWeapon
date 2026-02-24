@@ -157,9 +157,37 @@ whip = ["Guardian Tail",
         "Notched Whip",
         "Whip"]
 
-alltables = [axes, bows, crossbow, curved_greatsword, curved_sword,
-              daggers, fist, gb, gs, ga, gh,halb, hammers, katanas, 
-              thSword, sword, spear, ugs, whip]
+catalysts = [
+  "Beatrices Catalyst",
+  "Demons Catalyst",
+  "Izalith Catalyst",
+  "Logans Catalyst",
+  "Manus Catalyst",
+  "Oolacile Catalyst",
+  "Oolacile Ivory Catalyst",
+  "Sorcerers Catalyst",
+  "Tin Banishment Catalyst",
+  "Tin Crystallization Catalyst",
+  "Tin Darkmoon Catalyst "
+]
+
+talismans = [
+  "Canvas Talisman",
+  "Darkmoon Talisman",
+  "Ivory Talisman",
+  "Sunlight Talisman",
+  "Talisman",
+  "Thorolund Talisman",
+  "Velkas Talisman"
+]
+
+flames = ["Pyromancy flame"]
+
+alltables = [axes, bows, catalysts, crossbow, curved_greatsword, curved_sword,
+              daggers, fist, flames, gb, gs, ga, gh, halb, hammers, katanas, 
+              thSword, sword, spear, talismans, ugs, whip]
+
+
 
 p = ""
 ds1lista = []
@@ -167,6 +195,11 @@ ds1lista = []
 count = 0
 cr = 0
 folder = resource_path('weapons_pngs/ds1Weapons')
+
+p = f"{folder}/talisman"
+for y in os.listdir(p):
+    print(f"{y}")
+
 
 for images in os.listdir(folder):
     cr = 0

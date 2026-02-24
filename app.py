@@ -70,6 +70,9 @@ class ds1BronieFrame(tk.Frame):
         var17 = tk.BooleanVar()
         var18 = tk.BooleanVar()
         var19 = tk.BooleanVar()
+        var20 = tk.BooleanVar()
+        var21 = tk.BooleanVar()
+        var22 = tk.BooleanVar()
 
         def ChooseWeapon():
             global filtered_lista
@@ -98,6 +101,9 @@ class ds1BronieFrame(tk.Frame):
                 if key == bronie[16] and var17.get(): continue
                 if key == bronie[17] and var18.get(): continue
                 if key == bronie[18] and var19.get(): continue
+                if key == bronie[19] and var20.get(): continue
+                if key == bronie[20] and var21.get(): continue
+                if key == bronie[21] and var22.get(): continue
 
                 filtered_lista.append(item)
 
@@ -106,23 +112,26 @@ class ds1BronieFrame(tk.Frame):
         tk.Label(self, text="Wyjmij rodzaj broni z puli losowań", bg="#252526", fg="white").grid(row=0, column=0, columnspan=2)
         tk.Checkbutton(self, text="Axes", variable=var1, bg="#252526", fg="white",  selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=1, column=0)
         tk.Checkbutton(self, text="Bow", variable=var2, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=2, column=0)
-        tk.Checkbutton(self, text="Crossbow", variable=var3, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=3, column=0)
-        tk.Checkbutton(self, text="Curved Greatsword", variable=var4, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=4, column=0)
-        tk.Checkbutton(self, text="Curved Sword", variable=var5, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=5, column=0)
-        tk.Checkbutton(self, text="Dagger", variable=var6, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=6, column=0)
-        tk.Checkbutton(self, text="Fist", variable=var7, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=7, column=0)
-        tk.Checkbutton(self, text="Great Bow", variable=var8, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=8, column=0)
-        tk.Checkbutton(self, text="Great Sword", variable=var9, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=9, column=0)
-        tk.Checkbutton(self, text="Great Axe", variable=var10, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=10, column=0)
-        tk.Checkbutton(self, text="Great Hammer", variable=var11, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=11, column=0)
-        tk.Checkbutton(self, text="Halberd", variable=var12, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=12, column=0)
-        tk.Checkbutton(self, text="Hammer", variable=var13, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=13, column=0)
-        tk.Checkbutton(self, text="Katana", variable=var14, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=1, column=1)
-        tk.Checkbutton(self, text="Thrusting Sword", variable=var15, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=2, column=1)
-        tk.Checkbutton(self, text="Short sword", variable=var16, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=3, column=1)
-        tk.Checkbutton(self, text="Spear", variable=var17, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=4, column=1)
-        tk.Checkbutton(self, text="Ultra Greatsword", variable=var18, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=5, column=1)
-        tk.Checkbutton(self, text="Whip", variable=var19, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=6, column=1)
+        tk.Checkbutton(self, text="Catalyst", variable=var3, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=3, column=0)
+        tk.Checkbutton(self, text="Crossbow", variable=var4, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=4, column=0)
+        tk.Checkbutton(self, text="Curved Greatsword", variable=var5, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=5, column=0)
+        tk.Checkbutton(self, text="Curved Sword", variable=var6, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=6, column=0)
+        tk.Checkbutton(self, text="Dagger", variable=var7, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=7, column=0)
+        tk.Checkbutton(self, text="Fist", variable=var8, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=8, column=0)
+        tk.Checkbutton(self, text="Flames", variable=var9, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=9, column=0)
+        tk.Checkbutton(self, text="Great Bow", variable=var10, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=10, column=0)
+        tk.Checkbutton(self, text="Great Sword", variable=var11, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=11, column=0)
+        tk.Checkbutton(self, text="Great Axe", variable=var12, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=12, column=0)
+        tk.Checkbutton(self, text="Great Hammer", variable=var13, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=13, column=0)
+        tk.Checkbutton(self, text="Halberd", variable=var14, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=1, column=1)
+        tk.Checkbutton(self, text="Hammer", variable=var15, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=2, column=1)
+        tk.Checkbutton(self, text="Katana", variable=var16, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=3, column=1)
+        tk.Checkbutton(self, text="Thrusting Sword", variable=var17, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=4, column=1)
+        tk.Checkbutton(self, text="Short sword", variable=var18, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=5, column=1)
+        tk.Checkbutton(self, text="Spear", variable=var19, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=6, column=1)
+        tk.Checkbutton(self, text="Talisman", variable=var20, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=7, column=1)
+        tk.Checkbutton(self, text="Ultra Greatsword", variable=var21, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=8, column=1)
+        tk.Checkbutton(self, text="Whip", variable=var22, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white", command=ChooseWeapon).grid(row=9, column=1)
 
 
 
@@ -164,6 +173,9 @@ class ds2BronieFrame(tk.Frame):
         var20 = tk.BooleanVar()
         var21 = tk.BooleanVar()
         var22 = tk.BooleanVar()
+        var23 = tk.BooleanVar()
+        var24 = tk.BooleanVar()
+        var25 = tk.BooleanVar()
 
         def ChooseWeapon():
             global filtered_lista
@@ -195,6 +207,9 @@ class ds2BronieFrame(tk.Frame):
                 if key == bronie[19] and var20.get(): continue  
                 if key == bronie[20] and var21.get(): continue  
                 if key == bronie[21] and var22.get(): continue  
+                if key == bronie[22] and var23.get(): continue  
+                if key == bronie[23] and var24.get(): continue  
+                if key == bronie[24] and var25.get(): continue  
 
                 filtered_lista.append(item)
 
@@ -203,26 +218,29 @@ class ds2BronieFrame(tk.Frame):
         tk.Label(self, text="Wyjmij rodzaj broni z puli losowań", bg="#252526", fg="white").grid(row=0, column=0, columnspan=2)
         tk.Checkbutton(self, text="Axes", variable=var1, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=1, column=0)
         tk.Checkbutton(self, text="Bow", variable=var2, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=2, column=0)
-        tk.Checkbutton(self, text="Crossbow", variable=var3, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=3, column=0)
-        tk.Checkbutton(self, text="Curved Greatsword", variable=var4, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=4, column=0)
-        tk.Checkbutton(self, text="Curved Sword", variable=var5, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=5, column=0)
-        tk.Checkbutton(self, text="Dagger", variable=var6, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=6, column=0)
-        tk.Checkbutton(self, text="Fist", variable=var7, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=7, column=0)
-        tk.Checkbutton(self, text="Great Bow", variable=var8, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=8, column=0)
-        tk.Checkbutton(self, text="Great Sword", variable=var9, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=9, column=0)
-        tk.Checkbutton(self, text="Great Axe", variable=var10, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=10, column=0)
-        tk.Checkbutton(self, text="Great Hammer", variable=var11, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=11, column=0)
-        tk.Checkbutton(self, text="Halberd", variable=var12, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=12, column=0)
-        tk.Checkbutton(self, text="Hammer", variable=var13, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=13, column=0)
-        tk.Checkbutton(self, text="Katana", variable=var14, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=1, column=1)
-        tk.Checkbutton(self, text="Lances", variable=var15, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=2, column=1)
-        tk.Checkbutton(self, text="Thrusting Sword", variable=var16, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=3, column=1)
-        tk.Checkbutton(self, text="Reapers", variable=var17, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=4, column=1)
-        tk.Checkbutton(self, text="Short sword", variable=var18, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=5, column=1)
-        tk.Checkbutton(self, text="Spear", variable=var19, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=6, column=1)
-        tk.Checkbutton(self, text="Twinblades", variable=var20, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=7, column=1)
-        tk.Checkbutton(self, text="Ultra Greatsword", variable=var21, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=8, column=1)
-        tk.Checkbutton(self, text="Whip", variable=var22, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=9, column=1)
+        tk.Checkbutton(self, text="Catalist", variable=var3, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=3, column=0)
+        tk.Checkbutton(self, text="Crossbow", variable=var4, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=4, column=0)
+        tk.Checkbutton(self, text="Curved Greatsword", variable=var5, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=5, column=0)
+        tk.Checkbutton(self, text="Curved Sword", variable=var6, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=6, column=0)
+        tk.Checkbutton(self, text="Dagger", variable=var7, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=7, column=0)
+        tk.Checkbutton(self, text="Fist", variable=var8, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=8, column=0)
+        tk.Checkbutton(self, text="Flames", variable=var9, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=9, column=0)
+        tk.Checkbutton(self, text="Great Bow", variable=var10, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=10, column=0)
+        tk.Checkbutton(self, text="Great Sword", variable=var11, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=11, column=0)
+        tk.Checkbutton(self, text="Great Axe", variable=var12, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=12, column=0)
+        tk.Checkbutton(self, text="Great Hammer", variable=var13, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=13, column=0)
+        tk.Checkbutton(self, text="Halberd", variable=var14, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=1, column=1)
+        tk.Checkbutton(self, text="Hammer", variable=var15, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=2, column=1)
+        tk.Checkbutton(self, text="Katana", variable=var16, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=3, column=1)
+        tk.Checkbutton(self, text="Lances", variable=var17, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=4, column=1)
+        tk.Checkbutton(self, text="Thrusting Sword", variable=var18, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=5, column=1)
+        tk.Checkbutton(self, text="Reapers", variable=var19, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=6, column=1)
+        tk.Checkbutton(self, text="Short sword", variable=var20, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=7, column=1)
+        tk.Checkbutton(self, text="Spear", variable=var21, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=8, column=1)
+        tk.Checkbutton(self, text="Talisman", variable=var22, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=9, column=1)
+        tk.Checkbutton(self, text="Twinblades", variable=var23, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=10, column=1)
+        tk.Checkbutton(self, text="Ultra Greatsword", variable=var24, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=11, column=1)
+        tk.Checkbutton(self, text="Whip", variable=var25, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=12, column=1)
 
 
 class ds3BronieFrame(tk.Frame):
@@ -259,6 +277,10 @@ class ds3BronieFrame(tk.Frame):
         var18 = tk.BooleanVar()
         var19 = tk.BooleanVar()
         var20 = tk.BooleanVar()
+        var21 = tk.BooleanVar()
+        var22 = tk.BooleanVar()
+        var23 = tk.BooleanVar()
+        var24 = tk.BooleanVar()
 
         def ChooseWeapon():
             global filtered_lista
@@ -288,6 +310,10 @@ class ds3BronieFrame(tk.Frame):
                 if key == bronie[17] and var18.get(): continue
                 if key == bronie[18] and var19.get(): continue
                 if key == bronie[19] and var20.get(): continue  
+                if key == bronie[20] and var21.get(): continue
+                if key == bronie[21] and var22.get(): continue
+                if key == bronie[22] and var23.get(): continue
+                if key == bronie[23] and var24.get(): continue  
 
                 filtered_lista.append(item)
 
@@ -296,24 +322,28 @@ class ds3BronieFrame(tk.Frame):
         tk.Label(self, text="Wyjmij rodzaj broni z puli losowań", bg="#252526", fg="white").grid(row=0, column=0, columnspan=2)
         tk.Checkbutton(self, text="Axes", variable=var1, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=1, column=0)
         tk.Checkbutton(self, text="Bow", variable=var2, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=2, column=0)
-        tk.Checkbutton(self, text="Crossbow", variable=var3, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=3, column=0)
-        tk.Checkbutton(self, text="Curved Greatsword", variable=var4, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=4, column=0)
-        tk.Checkbutton(self, text="Curved Sword", variable=var5, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=5, column=0)
-        tk.Checkbutton(self, text="Dagger", variable=var6, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=6, column=0)
-        tk.Checkbutton(self, text="Fist", variable=var7, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=7, column=0)
-        tk.Checkbutton(self, text="Great Bow", variable=var8, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=8, column=0)
-        tk.Checkbutton(self, text="Great Sword", variable=var9, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=9, column=0)
-        tk.Checkbutton(self, text="Great Axe", variable=var10, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=10, column=0)
-        tk.Checkbutton(self, text="Great Hammer", variable=var11, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=11, column=0)
-        tk.Checkbutton(self, text="Halberd", variable=var12, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=12, column=0)
-        tk.Checkbutton(self, text="Hammer", variable=var13, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=13, column=0)
-        tk.Checkbutton(self, text="Katana", variable=var14, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=1, column=1)
-        tk.Checkbutton(self, text="Thrusting Sword", variable=var15, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=2, column=1)
-        tk.Checkbutton(self, text="Reapers", variable=var16, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=3, column=1)
-        tk.Checkbutton(self, text="Short sword", variable=var17, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=4, column=1)
-        tk.Checkbutton(self, text="Spear", variable=var18, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=5, column=1)
-        tk.Checkbutton(self, text="Ultra Greatsword", variable=var19, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=6, column=1)
-        tk.Checkbutton(self, text="Whip", variable=var20, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=7, column=1)
+        tk.Checkbutton(self, text="Chimes", variable=var3, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=3, column=0)
+        tk.Checkbutton(self, text="Crossbow", variable=var4, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=4, column=0)
+        tk.Checkbutton(self, text="Curved Greatsword", variable=var5, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=5, column=0)
+        tk.Checkbutton(self, text="Curved Sword", variable=var6, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=6, column=0)
+        tk.Checkbutton(self, text="Dagger", variable=var7, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=7, column=0)
+        tk.Checkbutton(self, text="Fist", variable=var8, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=8, column=0)
+        tk.Checkbutton(self, text="Flames", variable=var9, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=9, column=0)
+        tk.Checkbutton(self, text="Great Bow", variable=var10, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=10, column=0)
+        tk.Checkbutton(self, text="Great Sword", variable=var11, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=11, column=0)
+        tk.Checkbutton(self, text="Great Axe", variable=var12, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=12, column=0)
+        tk.Checkbutton(self, text="Great Hammer", variable=var13, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=13, column=0)
+        tk.Checkbutton(self, text="Halberd", variable=var14, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=1, column=1)
+        tk.Checkbutton(self, text="Hammer", variable=var15, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=2, column=1)
+        tk.Checkbutton(self, text="Katana", variable=var16, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=3, column=1)
+        tk.Checkbutton(self, text="Thrusting Sword", variable=var17, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=4, column=1)
+        tk.Checkbutton(self, text="Reapers", variable=var18, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=5, column=1)
+        tk.Checkbutton(self, text="Short sword", variable=var19, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=6, column=1)
+        tk.Checkbutton(self, text="Spear", variable=var20, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=7, column=1)
+        tk.Checkbutton(self, text="Staves", variable=var21, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=8, column=1)
+        tk.Checkbutton(self, text="Talisman", variable=var22, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=9, column=1)
+        tk.Checkbutton(self, text="Ultra Greatsword", variable=var23, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=10, column=1)
+        tk.Checkbutton(self, text="Whip", variable=var24, bg="#252526", fg="white", selectcolor="#252526", activebackground="#252526", activeforeground="white",command=ChooseWeapon).grid(row=11, column=1)
 
 
 def RandomWeap():
@@ -333,8 +363,18 @@ def RandomWeap():
 
 rand, weap = RandomWeap()
 
+p = resource_path("weapons_pngs/nosw.png")
 def update_label():
     rand, weap = RandomWeap()
+
+    if not rand or not weap:
+        label.config(text="Brak broni w puli!")
+        i = Image.open(p)
+        im = ImageTk.PhotoImage(i)
+        image_label.config(image=im, width=100, height=100)
+        image_label.photo = im
+        return
+
     imag = Image.open(weap)
     img = ImageTk.PhotoImage(imag)
     image_label.config(image=img)

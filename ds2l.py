@@ -300,7 +300,47 @@ whip = [
 "Whip"
 ]
 
+chimes = [
+  "Archdrake Chime",
+  "Caithas Chime",
+  "chime of screams",
+  "Chime of Want",
+  "Clerics Sacred Chime",
+  "Disc Chime",
+  "Dragon Chime",
+  "Idols Chime",
+  "Priests Chime",
+  "Protective Chime",
+  "Witchtree Bellvine"
+]
+
+flames = ["Pyromancy Flame", "Dark Pyromancy Flame"]
+
+catalist = [
+  "archdrake staff",
+  "azal staff",
+  "Bat Staff",
+  "Black Witchs Staff",
+  "Bone Staff",
+  "Lizard Staff",
+  "Magic Staff of Wisdom",
+  "Olenfords Staff",
+  "Retainer Staff",
+  "Sorcerers Staff",
+  "Staff of Amana",
+  "Sunset Staff",
+  "Transgressors Staff",
+  "Witchtree Branch"
+]
+
 folder2 = resource_path('weapons_pngs/ds2Weapons')
+
+
+
+p = f"{folder2}/catalist"
+for y in os.listdir(p):
+    print(f"{y}")
+
 
 sd = []
 
@@ -314,11 +354,11 @@ for x in os.listdir(folder2):
 
 print(len(sd))
 
-alltab = [axes, bow, crossbow, curved_greatswords,
-          curved_swords, dagger, fist_claws, greatbows, greatsword, great_axes,
+alltab = [axes, bow, catalist, crossbow, curved_greatswords,
+          curved_swords, dagger, fist_claws, flames, greatbows, greatsword, great_axes,
           great_hammer, halberd,
           hammers, katanas, lances, piercing_swords,
-          reaper, shortsword, spear, twinblades, ultra_greatsword,
+          reaper, shortsword, spear, chimes, twinblades, ultra_greatsword,
           whip]
 
 bronie = []
